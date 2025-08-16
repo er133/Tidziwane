@@ -19,12 +19,18 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background: #fffaf7;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #064e3b;
+  color: #6a0dad; /* purple */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -35,7 +41,7 @@ nav a {
 }
 
 .signin-btn {
-  background: #064e3b;
+  background: #6a0dad; /* purple */
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -60,7 +66,8 @@ nav a {
 }
 
 .search-bar input {
-  width: 60%;
+  width: 80%;
+  max-width: 500px;
   padding: 0.8rem;
   border: none;
   border-radius: 10px;
@@ -80,7 +87,7 @@ nav a {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
 }
 
@@ -106,4 +113,21 @@ nav a {
 .product-card span {
   color: #333;
   font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
 }
