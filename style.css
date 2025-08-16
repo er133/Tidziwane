@@ -1,68 +1,109 @@
-body {
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #333;
 }
 
-header {
-  background-color: #8000ff;
-  color: white;
-  padding: 20px;
-  text-align: center;
+body {
+  background-color: #fffaf7;
+  color: #111;
+  line-height: 1.6;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fffaf7;
 }
 
-.search-bar {
-  margin-top: 10px;
-  padding: 10px;
-  width: 60%;
-  border-radius: 5px;
-  border: none;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #064e3b;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #111;
   font-size: 1rem;
 }
 
-.products {
+.signin-btn {
+  background: #064e3b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 40px;
-  flex-wrap: wrap;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: #e9e2dc;
+  font-size: 1rem;
+}
+
+/* Products */
+.products {
+  padding: 2rem;
+}
+
+.products h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 .product-card {
-  background: white;
-  border: 2px solid #8000ff;
-  border-radius: 10px;
-  padding: 20px;
   text-align: center;
-  width: 200px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .product-card img {
-  max-width: 100%;
-  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
-.price {
-  color: #8000ff;
+.product-card p {
   font-weight: bold;
-  margin-top: 10px;
+  margin-bottom: 0.5rem;
 }
 
-footer {
-  background-color: #8000ff;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+.product-card span {
+  color: #333;
+  font-size: 0.9rem;
 }
